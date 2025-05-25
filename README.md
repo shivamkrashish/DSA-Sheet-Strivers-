@@ -1,35 +1,20 @@
-# 📚 Striver's DSA Sheet Solutions
+# 📘 Striver's DSA Sheet – Complete Java Solutions by Shivam Kumar Ashish
 
-Welcome to the **Striver's DSA Sheet Solutions** repository! This project is a comprehensive collection of solutions to the problems listed in [Striver's A2Z DSA Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/). It's designed to aid in mastering Data Structures and Algorithms (DSA) through a structured and systematic approach.
-
----
-
-## 🧾 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Folder Structure](#folder-structure)
-- [How to Use](#how-to-use)
-- [Contributing](#contributing)
-- [Resources](#resources)
-- [License](#license)
+Welcome to the **DSA-Sheet-Strivers** repository!  
+This repository contains 100% **Java solutions** to the famous [Striver’s A2Z DSA Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) – perfect for students preparing for placements, coding interviews, and mastering Data Structures and Algorithms from scratch.
 
 ---
 
-## 📖 About
+## 📌 Features
 
-This repository aims to provide clear and concise solutions to the problems in Striver's DSA Sheet. Each solution is implemented with readability and efficiency in mind, making it a valuable resource for both beginners and experienced programmers preparing for technical interviews.
-
----
-
-## ✨ Features
-
-- ✅ Solutions categorized by topic and difficulty.
-- 💡 Includes problem statements, approaches, and optimized code.
-- 🧠 Emphasis on understanding the underlying concepts.
-- 🛠️ Regular updates and improvements.
+- ✅ Clean and optimized **Java** solutions
+- 🧠 Structured topic-wise as per the original sheet
+- 💬 Each solution includes proper **comments** and logic
+- 🔁 Regularly updated as per progress
+- 📂 Easy folder-wise navigation (Arrays, Strings, Trees, DP, etc.)
+- 🧑‍🎓 Made with 💙 by Shivam Kumar Ashish
 
 ---
 
-## 📁 Folder Structure
+## 📂 Folder Structure
 
