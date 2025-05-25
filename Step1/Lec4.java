@@ -48,21 +48,68 @@
 //You are given an integer n. You need to check whether the number is a palindrome number or not.
 // Return true if it's a palindrome number, otherwise return false.
 //A palindrome number is a number which reads the same both left to right and right to left.
+// public class Lec4 {
+//     public static boolean isPalindrome(int n) {
+//         int original_n = n;
+//         int rev = 0;
+//         if(n<0){
+//             return false;
+//         }
+//         while(n != 0){
+//             int digit = n%10;
+//             rev = rev * 10 + digit;
+//             n /=10;
+//         }
+//         return original_n == rev;
+//     }
+//     public static void main(String[]args){
+//         System.out.println("Palindrom is:"+isPalindrome(1321));
+//     }
+// }
+
+
+//Q4.GCD of Two Numbers
+//You are given two integers n1 and n2. You need find the Greatest Common Divisor (GCD) of the two given numbers. 
+//Return the GCD of the two numbers.
+//The Greatest Common Divisor (GCD) of two integers is the largest positive integer that divides both of the integers.
+// public class Lec4 {
+//     public static int GCD(int n1, int n2) {
+//         if(n2==0){
+//             return n1;
+//         }
+//          return GCD(n2, n1%n2);
+//     }
+//     public static void main(String[]args){
+//        int num1 = 6;
+//         int num2 = 8;
+//         int result = GCD(num1, num2);
+//         System.out.println("GCD of " + num1 + " and " + num2 + " is: " + result);
+//     }
+// }
+
+
+//Q5.Check if the Number is Armstrong
+//You are given an integer n. You need to check whether it is an armstrong number or not.
+//Return true if it is an armstrong number, otherwise return false.
+//An armstrong number is a number which is equal to the sum of the digits of the number, raised to the power of the number of digits.
 public class Lec4 {
-    public static boolean isPalindrome(int n) {
-        int original_n = n;
-        int rev = 0;
-        if(n<0){
-            return false;
+    public static boolean isArmstrong(int n) {
+        int original = n;
+        int sum = 0;
+        while (n > 0) {
+            int digit = n % 10;
+            sum += digit * digit * digit;
+            n /= 10;
         }
-        while(n != 0){
-            int digit = n%10;
-            rev = rev * 10 + digit;
-            n /=10;
-        }
-        return original_n == rev;
+        return sum == original;
     }
-    public static void main(String[]args){
-        System.out.println("Palindrom is:"+isPalindrome(1321));
+
+    public static void main(String[] args) {
+        int n = 103;
+        if (isArmstrong(n)) {
+            System.out.println(n + " is an Armstrong number.");
+        } else {
+            System.out.println(n + " is NOT an Armstrong number.");
+        }
     }
 }
