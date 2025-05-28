@@ -25,15 +25,12 @@
 //         int temp = arr[i];
 //         arr[i] = arr[n - i - 1];
 //         arr[n - i - 1] = temp;
-
 //         reverse(arr, i + 1, n);
 //     }
 //     public static void main(String[] args) {
 //         int arr[] = {1, 2, 3, 4, 5};  // ✅ Corrected
 //         int n = arr.length;
-
 //         reverse(arr, 0, n);  // ✅ Static call
-
 //         for(int i = 0; i < n; i++) {
 //             System.out.print(arr[i] + " ");  // ✅ Print in same line
 //         }
@@ -48,11 +45,9 @@
 //     public boolean isPalindrome(String s) {
 //         int p1 = 0, p2 = s.length() - 1;
 //         s = s.toLowerCase();
-
 //         while (p1 < p2) {
 //             char ch1 = s.charAt(p1);
 //             char ch2 = s.charAt(p2);
-
 //             // Skip non-alphanumeric characters
 //             if (!((ch1 >= 'a' && ch1 <= 'z') || (ch1 >= '0' && ch1 <= '9'))) {
 //                 p1++;
@@ -62,18 +57,14 @@
 //                 p2--;
 //                 continue;
 //             }
-
 //             if (ch1 != ch2) {
 //                 return false;
 //             }
-
 //             p1++;
 //             p2--;
 //         }
-
 //         return true;
 //     }
-
 //     public static void main(String[] args) {
 //         String s = "abccba";
 //         Lec5 obj = new Lec5();
@@ -86,22 +77,22 @@
 //The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
 //F(0) = 0, F(1) = 1
 //F(n) = F(n - 1) + F(n - 2), for n > 1.
-public class Lec5 {
-    public int fib(int n) {
-        if (n <= 1) return n;
-        int a = 0, b = 1;
-        for (int i = 2; i <= n; i++) {
-            int c = a + b;
-            a = b;
-            b = c;
-        }
-        return b;
-    }
-    public static void main(String[] args) {
-        int n = 2;
-        Lec5 obj = new Lec5(); // Create an object to call the non-static method
-        int result = obj.fib(n); // Call the method
-        System.out.println("Fibonacci number at position " + n + " is: " + result);
-    }
-}
+// public class Lec5 {
+//     public int fib(int n) {
+//         if (n <= 1) return n;
+//         int a = 0, b = 1;
+//         for (int i = 2; i <= n; i++) {
+//             int c = a + b;
+//             a = b;
+//             b = c;
+//         }
+//         return b;
+//     }
+//     public static void main(String[] args) {
+//         int n = 2;
+//         Lec5 obj = new Lec5(); // Create an object to call the non-static method
+//         int result = obj.fib(n); // Call the method
+//         System.out.println("Fibonacci number at position " + n + " is: " + result);
+//     }
+// }
 
