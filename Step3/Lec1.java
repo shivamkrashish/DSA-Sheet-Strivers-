@@ -84,29 +84,63 @@
 //Q4.Remove duplicates from sorted array
 //Given an integer array nums sorted in non-decreasing order, remove all duplicates in-place so that each unique element appears only once.
 //Return the number of unique elements in the array.
- public class Lec1{
-    public static int removeDuplicates(int[] arr) {
-        int k = 0;  // index to insert unique element
-        for (int i = 0; i < arr.length; i++) {
-            boolean isDuplicate = false;
-            for (int j = 0; j < i; j++) {
-                if (arr[i] == arr[j]) {
-                    isDuplicate = true;
-                    break;
-                }
-            }
-            if (!isDuplicate) {
-                arr[k++] = arr[i];  // place unique element at index k and increment k
-            }
+//  public class Lec1{
+//     public static int removeDuplicates(int[] arr) {
+//         int k = 0;  // index to insert unique element
+//         for (int i = 0; i < arr.length; i++) {
+//             boolean isDuplicate = false;
+//             for (int j = 0; j < i; j++) {
+//                 if (arr[i] == arr[j]) {
+//                     isDuplicate = true;
+//                     break;
+//                 }
+//             }
+//             if (!isDuplicate) {
+//                 arr[k++] = arr[i];  // place unique element at index k and increment k
+//             }
+//         }
+//         return k;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2, 3, 4, 7};
+//         int k = removeDuplicates(arr);
+//         System.out.print("After removing duplicates: ");
+//         for (int i = 0; i < k; i++) {
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+// }
+
+//Q5.Rotate Array
+//Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+public class Lec1 {
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        k = k % n; // Handle cases where k > n
+        // Reverse the whole array
+        reverse(nums, 0, n - 1);
+        // Reverse the first k elements
+        reverse(nums, 0, k - 1);
+        // Reverse the rest
+        reverse(nums, k, n - 1);
+    }
+    private void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
         }
-        return k;
     }
     public static void main(String[] args) {
-        int[] arr = {2, 3, 4, 7};
-        int k = removeDuplicates(arr);
-        System.out.print("After removing duplicates: ");
-        for (int i = 0; i < k; i++) {
-            System.out.print(arr[i] + " ");
-        }
+    int nums[] = {1, 2, 3, 4, 5, 6, 7};
+    int k = 3;
+    Lec1 obj = new Lec1();     // Class ka object banaya
+    obj.rotate(nums, k);       // rotate() method call kiya
+    // Output print kiya
+    for (int num : nums) {
+        System.out.print(num + " ");
     }
+  }
 }
