@@ -49,38 +49,62 @@
 //Q3.Sort an array of 0's 1's and 2's
 //Given an array nums consisting of only 0, 1, or 2. Sort the array in non-decreasing order. 
 //The sorting must be done in-place, without making a copy of the original array.
-public class Lec2 {
-    public void sortColors(int[] nums) {
-        int low = 0;
-        int mid = 0;
-        int high = nums.length-1;
-        while(mid <= high){
-            if(nums[mid]==0){
-                    int temp0 = nums[low];
-                    nums[low] = nums[mid];
-                    nums[mid] = temp0;
-                    low++;
-                    mid++;
+// public class Lec2 {
+//     public void sortColors(int[] nums) {
+//         int low = 0;
+//         int mid = 0;
+//         int high = nums.length-1;
+//         while(mid <= high){
+//             if(nums[mid]==0){
+//                     int temp0 = nums[low];
+//                     nums[low] = nums[mid];
+//                     nums[mid] = temp0;
+//                     low++;
+//                     mid++;
+//             }
+//             else if(nums[mid]==1){
+//                 mid++;
+//             }
+//             else{
+//             int temp1 = nums[high];
+//             nums[high]=nums[mid];
+//             nums[mid]=temp1;
+//             high--;
+//             }
+//         }
+//     }
+//     public static void main(String[] args) {
+//     int nums[] = {0, 1, 1, 0, 2, 2, 1};
+//     Lec2 obj = new Lec2();
+//     obj.sortColors(nums); // Sort in-place
+
+//     System.out.print("The sorted colors are: ");
+//     for (int num : nums) {
+//         System.out.print(num + " ");
+//     }
+// }
+// }
+
+// /Q4.Best time to buy and sell stock
+// Given an array arr of n integers, where arr[i] represents price of the stock on the ith day. 
+// Determine the maximum profit achievable by buying and selling the stock at most once. 
+// The stock should be purchased before selling it, and both actions cannot occur on the same day.
+public class Lec2{
+    public static void main(String[] args) {
+        int[] prices = {7, 1, 5, 3, 6, 4};
+        int min = prices[0];
+        int profit = 0;
+
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] < min) {
+                min = prices[i];  // update min price
             }
-            else if(nums[mid]==1){
-                mid++;
-            }
-            else{
-            int temp1 = nums[high];
-            nums[high]=nums[mid];
-            nums[mid]=temp1;
-            high--;
+            int currentProfit = prices[i] - min;
+            if (currentProfit > profit) {
+                profit = currentProfit;  // update profit
             }
         }
-    }
-    public static void main(String[] args) {
-    int nums[] = {0, 1, 1, 0, 2, 2, 1};
-    Lec2 obj = new Lec2();
-    obj.sortColors(nums); // Sort in-place
 
-    System.out.print("The sorted colors are: ");
-    for (int num : nums) {
-        System.out.print(num + " ");
+        System.out.println("Maximum Profit: " + profit);
     }
-}
 }
