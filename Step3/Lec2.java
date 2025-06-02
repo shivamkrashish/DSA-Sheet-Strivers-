@@ -89,22 +89,20 @@
 // Given an array arr of n integers, where arr[i] represents price of the stock on the ith day. 
 // Determine the maximum profit achievable by buying and selling the stock at most once. 
 // The stock should be purchased before selling it, and both actions cannot occur on the same day.
-public class Lec2{
-    public static void main(String[] args) {
-        int[] prices = {7, 1, 5, 3, 6, 4};
-        int min = prices[0];
-        int profit = 0;
-
-        for (int i = 1; i < prices.length; i++) {
-            if (prices[i] < min) {
-                min = prices[i];  // update min price
-            }
-            int currentProfit = prices[i] - min;
-            if (currentProfit > profit) {
-                profit = currentProfit;  // update profit
-            }
-        }
-
-        System.out.println("Maximum Profit: " + profit);
-    }
-}
+// public class Lec2{
+//     public static void main(String[] args) {
+//         int[] prices = {7, 1, 5, 3, 6, 4};
+//         int min = prices[0];
+//         int profit = 0;
+//         for (int i = 1; i < prices.length; i++) {
+//             if (prices[i] < min) {
+//                 min = prices[i];  // update min price
+//             }
+//             int currentProfit = prices[i] - min;
+//             if (currentProfit > profit) {
+//                 profit = currentProfit;  // update profit
+//             }
+//         }
+//         System.out.println("Maximum Profit: " + profit);
+//     }
+// }
