@@ -63,7 +63,6 @@ public class Lec1{
 
         return result.toString();
     }
-    
   public static void main(String[]args){
     String s = "(())";
     System.out.println(removeOuterParentheses(s));
